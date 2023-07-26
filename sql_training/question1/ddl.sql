@@ -8,3 +8,8 @@ id INTEGER PRIMARY KEY NOT NULL,
 departmentId INTEGER NOT NULL REFERENCES departments(id),
 name VARCHAR(50) NOT NULL
 );
+
+CREATE TABLE departmentReport (
+departmentName VARCHAR(50) NOT NULL,
+employeeCount INTEGER NOT NULL
+);
