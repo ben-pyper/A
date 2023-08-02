@@ -1,0 +1,5 @@
+CREATE TABLE employees_hier (
+id INTEGER PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+managerId VARCHAR(255)
+);

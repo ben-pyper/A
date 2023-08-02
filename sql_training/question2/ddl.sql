@@ -1,0 +1,12 @@
+CREATE TABLE customers (
+id INTEGER PRIMARY KEY NOT NULL,
+name VARCHAR(50),
+balance DECIMAL(10,2)
+);
+
+CREATE TABLE orders (
+id INTEGER PRIMARY KEY NOT NULL,
+customerId INTEGER NOT NULL REFERENCES customers(id),
+product VARCHAR(100)
+);
+

@@ -1,0 +1,16 @@
+CREATE TABLE colleges (
+id INTEGER PRIMARY KEY,
+name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE students (
+id INTEGER PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+collegeId INTEGER REFERENCES colleges(id)
+);
+
+CREATE TABLE rankings (
+studentId INTEGER REFERENCES students(id),
+ranking INTEGER NOT NULL,
+year INTEGER NOT NULL
+);

@@ -1,0 +1,21 @@
+CREATE TABLE companies (
+id INTEGER PRIMARY KEY,
+name VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE cars (
+id INTEGER PRIMARY KEY,
+name VARCHAR(40) NOT NULL,
+companyId INTEGER NOT NULL REFERENCES companies(id)
+);
+
+CREATE TABLE events (
+id INTEGER PRIMARY KEY,
+name VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE eventParticipants (
+carId INTEGER NOT NULL REFERENCES cars(id),
+eventId INTEGER NOT NULL REFERENCES events(id),
+PRIMARY KEY(carId, eventId)
+);

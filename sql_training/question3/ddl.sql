@@ -1,0 +1,10 @@
+CREATE TABLE customer_tr (
+id INTEGER NOT NULL PRIMARY KEY,
+name VARCHAR (30) NOT NULL
+);
+
+CREATE TABLE transactions (
+id INTEGER NOT NULL PRIMARY KEY,
+customerID INTEGER REFERENCES customer_tr(id),
+amount DECIMAL(15,2) NOT NULL
+);
