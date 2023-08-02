@@ -1,0 +1,15 @@
+CREATE TABLE genres (
+id INTEGER PRIMARY KEY,
+name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE movies (
+id INTEGER PRIMARY KEY,
+name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE moviesGenres (
+movieId INTEGER REFERENCES movies(id),
+genreId INTEGER REFERENCES genres(id),
+PRIMARY KEY(movieId, genreId)
+);
