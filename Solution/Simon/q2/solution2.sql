@@ -1,1 +1,0 @@
-DELETE FROM orders WHERE (SELECT id FROM customers WHERE balance < 0);
